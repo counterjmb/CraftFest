@@ -1,0 +1,17 @@
+#Craft Fest US English
+
+#Blocks
+tile.Clover Grass.name=Clover Grass
+tile.FourLeafClover.name=Four Leaf Clover
+
+#Items
+
+#Armor
+
+#Tabs
+itemGroup.winter=Winter
+itemGroup.spring=Spring
+itemGroup.summer=Summer
+itemGroup.fall=Fall
+
+#Dimensions

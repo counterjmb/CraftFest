@@ -1,0 +1,16 @@
+[
+{
+  "modid": "craftfest",
+  "name": "Craft Fest",
+  "description": "Adds holidays and dimensions to Minecraft.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["counterjmb & arcita"],
+  "credits": "The Forge and FML guys, for making this possible",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
