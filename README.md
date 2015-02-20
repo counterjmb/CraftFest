@@ -1,5 +1,3 @@
 # CraftFest
 
-testing trello intergration
-
-mother fucker 
+Adding holidays and other useless stuff
