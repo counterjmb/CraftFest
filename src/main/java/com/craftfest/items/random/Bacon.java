@@ -10,7 +10,7 @@ public class Bacon extends ItemFood{
 		super(hunger, saturation, wolf);
 		setCreativeTab(CraftFestMod.tabSpring);
 		setUnlocalizedName("bacon");
-		setTextureName(CraftFestMod.MODID + ":" + getUnlocalizedName().substring(5));
+		
 
 	}
 

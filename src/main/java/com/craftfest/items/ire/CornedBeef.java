@@ -10,7 +10,7 @@ public class CornedBeef extends ItemFood{
 		super(hunger, saturation, wolf);
 		setCreativeTab(CraftFestMod.tabSpring);
 		setUnlocalizedName("cornedbeef");
-		setTextureName(CraftFestMod.MODID + ":" + getUnlocalizedName().substring(5));
+		
 
 	}
 

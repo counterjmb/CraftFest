@@ -13,8 +13,7 @@ public class Dimensions {
 	
 	public static void init(){
 		//Dimensions
-		DimensionManager.registerProviderType(christmasDimID, ChristmasWorldProvider.class, false);
-		DimensionManager.registerDimension(christmasDimID, christmasDimID);
+
 	}
 
 }

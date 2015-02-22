@@ -10,7 +10,6 @@ public class GlassMug extends Item{
 	
 		super();
 		setUnlocalizedName("glassbottle");
-		setTextureName(CraftFestMod.MODID + ":" + getUnlocalizedName().substring(5));
 		setCreativeTab(CraftFestMod.tabSpring);
 	}
 

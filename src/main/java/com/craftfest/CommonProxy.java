@@ -1,11 +1,9 @@
 package com.craftfest;
 
 import com.craftfest.blocks.ModBlocks;
-import com.craftfest.entity.blocks.WreathTileEntity;
 import com.craftfest.handler.Config;
 import com.craftfest.handler.Recipes;
 import com.craftfest.items.ModItems;
-import com.craftfest.render.WreathRenderer;
 import com.craftfest.tileentity.ModTileEntities;
 import com.craftfest.world.Dimensions;
 import com.craftfest.world.biomes.ModBiomes;
@@ -36,7 +34,7 @@ public class CommonProxy {
 	}
 	
     public void registerRenderThings() {
-        ClientRegistry.bindTileEntitySpecialRenderer(WreathTileEntity.class, new WreathRenderer());
+        //ClientRegistry.bindTileEntitySpecialRenderer(WreathTileEntity.class, new WreathRenderer());
 }
 
 }

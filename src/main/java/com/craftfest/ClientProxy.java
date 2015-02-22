@@ -1,9 +1,5 @@
 package com.craftfest;
 
-import com.craftfest.entity.blocks.WreathTileEntity;
-import com.craftfest.render.WreathRenderer;
-
-import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;

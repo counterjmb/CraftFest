@@ -7,7 +7,7 @@ public class ModMaterials {
 	
 	//(name, durability, durability * reductionAmounts, enchantability)
 	//0 is helmet, 1 is plate, 2 is legs and 3 is boots
-	
+	/*
 	//Halloween
 	static ArmorMaterial Vampire = EnumHelper.addArmorMaterial("vampire", 33, new int[]{3, 8, 6, 3}, 9);
 	static ArmorMaterial WereWolf = EnumHelper.addArmorMaterial("werewolf", 33, new int[]{3, 8, 6, 3}, 9);
@@ -35,5 +35,5 @@ public class ModMaterials {
 	static ArmorMaterial pirate = EnumHelper.addArmorMaterial("pirate", 33, new int[]{3, 8, 6, 3}, 9);
 	static ArmorMaterial pilgrimMale = EnumHelper.addArmorMaterial("pilgrim", 33, new int[]{3, 8, 6, 3}, 9);
 	
-	
+	*/
 }

@@ -17,12 +17,12 @@ public class ModBiomes {
 	
 	
 	public static void init(){
-		
+		/*
 		snowyforest = new SnowyForest(snowforestID);
 		
 		BiomeDictionary.registerBiomeType(snowyforest, Type.FOREST);
 		BiomeManager.addSpawnBiome(snowyforest);
-	
+	*/
 		
 	}
 

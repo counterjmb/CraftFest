@@ -1,6 +1,5 @@
 package com.craftfest.items.random;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
@@ -17,7 +16,6 @@ public class XPPie extends ItemFood{
 		
 		super(2, 2.0F, false);
 		setUnlocalizedName("xppie");
-		setTextureName(CraftFestMod.MODID + ":" + getUnlocalizedName().substring(5));
 		setCreativeTab(CraftFestMod.tabSpring);
 		
 		this.alwaysEdible = true;
@@ -28,7 +26,7 @@ public class XPPie extends ItemFood{
     {
     	player.addExperienceLevel(3);
         --stack.stackSize;
-        player.getFoodStats().func_151686_a(this, stack);
+        player.getFoodStats().addStats(this, stack);
         world.playSoundAtEntity(player, "random.burp", 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
         this.onFoodEaten(stack, world, player);
         return stack;

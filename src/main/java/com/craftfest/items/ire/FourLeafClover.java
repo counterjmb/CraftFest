@@ -13,7 +13,6 @@ public class FourLeafClover extends Item{
 		
 		super();
 		setUnlocalizedName("FourLeafClover");
-		setTextureName(CraftFestMod.MODID + ":" + getUnlocalizedName().substring(5));
 		setCreativeTab(CraftFestMod.tabSpring);
 
 	}

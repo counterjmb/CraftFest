@@ -3,9 +3,6 @@ package com.craftfest;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
-
-import com.craftfest.entity.blocks.WreathTileEntity;
-
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -73,7 +70,7 @@ public class CraftFestMod {
 		
 		
 		proxy.registerRenderThings();
-        GameRegistry.registerTileEntity(WreathTileEntity.class, "wreathtileentity");
+        //GameRegistry.registerTileEntity(WreathTileEntity.class, "wreathtileentity");
 	}
 	
 	@EventHandler
