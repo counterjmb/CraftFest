@@ -5,6 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 
+import com.craftfest.CraftFestMod;
 import com.craftfest.items.ModItems;
 
 import cpw.mods.fml.relauncher.Side;
@@ -18,7 +19,7 @@ public class BirthdayCakeBlock extends BlockCake{
 		
 		super();
 		setUnlocalizedName("birthdaycake");
-		
+		setCreativeTab(CraftFestMod.tabSpring);
 		
 		
 	}

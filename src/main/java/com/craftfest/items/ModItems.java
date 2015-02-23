@@ -2,7 +2,6 @@ package com.craftfest.items;
 
 import net.minecraft.item.Item;
 
-import com.craftfest.handler.RegisterHelper;
 import com.craftfest.items.ire.CornedBeef;
 import com.craftfest.items.ire.FourLeafClover;
 import com.craftfest.items.ire.GreenBeer;
@@ -10,6 +9,7 @@ import com.craftfest.items.random.Beer;
 import com.craftfest.items.random.BirthdayCakeItem;
 import com.craftfest.items.random.GlassMug;
 import com.craftfest.items.random.XPPie;
+import com.craftfest.util.RegisterHelper;
 
 public class ModItems {
 	

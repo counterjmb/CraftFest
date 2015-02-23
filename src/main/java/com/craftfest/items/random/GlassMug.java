@@ -1,8 +1,8 @@
 package com.craftfest.items.random;
 
-import com.craftfest.CraftFestMod;
-
 import net.minecraft.item.Item;
+
+import com.craftfest.CraftFestMod;
 
 public class GlassMug extends Item{
 	

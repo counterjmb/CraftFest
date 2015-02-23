@@ -1,17 +1,17 @@
 package com.craftfest;
 
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
 import com.craftfest.blocks.ModBlocks;
-import com.craftfest.handler.Config;
-import com.craftfest.handler.Recipes;
 import com.craftfest.items.ModItems;
 import com.craftfest.tileentity.ModTileEntities;
+import com.craftfest.util.Config;
+import com.craftfest.util.Recipes;
 import com.craftfest.world.Dimensions;
 import com.craftfest.world.biomes.ModBiomes;
 
-import cpw.mods.fml.client.registry.ClientRegistry;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class CommonProxy {
 	

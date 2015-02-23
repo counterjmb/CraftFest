@@ -1,8 +1,8 @@
 package com.craftfest.items.ire;
 
-import com.craftfest.CraftFestMod;
-
 import net.minecraft.item.ItemFood;
+
+import com.craftfest.CraftFestMod;
 
 public class CornedBeef extends ItemFood{
 	

@@ -1,9 +1,6 @@
 package com.craftfest.items.ire;
 
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 
 import com.craftfest.CraftFestMod;
 

@@ -1,12 +1,12 @@
 package com.craftfest.items.random;
 
-import com.craftfest.CraftFestMod;
-import com.craftfest.items.ModItems;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemSoup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
+import com.craftfest.CraftFestMod;
+import com.craftfest.items.ModItems;
 
 public class Beer extends ItemSoup{
 	public Beer(int hunger) {

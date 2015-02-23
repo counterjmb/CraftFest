@@ -1,4 +1,4 @@
-package com.craftfest.handler;
+package com.craftfest.util;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;

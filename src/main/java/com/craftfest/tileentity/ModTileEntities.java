@@ -2,7 +2,7 @@ package com.craftfest.tileentity;
 
 import net.minecraft.tileentity.TileEntityChest;
 
-import com.craftfest.handler.RegisterHelper;
+import com.craftfest.util.RegisterHelper;
 
 public class ModTileEntities {
 	
