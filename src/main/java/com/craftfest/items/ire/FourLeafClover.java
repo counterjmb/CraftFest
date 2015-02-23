@@ -6,12 +6,18 @@ import com.craftfest.CraftFestMod;
 
 public class FourLeafClover extends Item{
 	
+	private final String name = "FourLeafClover";
+	
 	public FourLeafClover(){
 		
 		super();
 		setUnlocalizedName("FourLeafClover");
 		setCreativeTab(CraftFestMod.tabSpring);
 
+	}
+	
+	public String getName(){
+		return name;
 	}
 	
 	//action

@@ -1,7 +1,11 @@
 package com.craftfest.items;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.RenderItem;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 
+import com.craftfest.CraftFestMod;
 import com.craftfest.items.ire.CornedBeef;
 import com.craftfest.items.ire.FourLeafClover;
 import com.craftfest.items.ire.GreenBeer;
@@ -29,6 +33,7 @@ public class ModItems {
 	
 	public static void Init(){
 		
+		RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
 		
 		//random
 		RegisterHelper.registerItem(GlassMug);
@@ -37,10 +42,13 @@ public class ModItems {
 		RegisterHelper.registerItem(BirthdayCakeItem);
 				
 		//Ire
+		
+		renderItem.getItemModelMesher().register(FourLeafClover, 0, new ModelResourceLocation(CraftFestMod.MODID + ":" + ((FourLeafClover) FourLeafClover).getName(), "inventory" ));
+		/*
 		RegisterHelper.registerItem(FourLeafClover);
 		RegisterHelper.registerItem(CornedBeef);
 		RegisterHelper.registerItem(GreenBeer);
-		
+		*/
 	}
 
 }
