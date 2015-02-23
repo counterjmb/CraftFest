@@ -17,10 +17,6 @@ public class Recipes {
 		GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.CloverGrass),
 				new Object[] { Blocks.grass, ModItems.FourLeafClover });
 		
-		
-
-		
-
-	}
+			}
 
 }

@@ -1,45 +1,48 @@
 package com.craftfest;
 
+import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.relauncher.Side;
 
 import com.craftfest.blocks.ModBlocks;
 import com.craftfest.items.ModItems;
-import com.craftfest.tileentity.ModTileEntities;
-import com.craftfest.util.Config;
 import com.craftfest.util.Recipes;
 import com.craftfest.world.Dimensions;
 import com.craftfest.world.biomes.ModBiomes;
 
 public class CommonProxy {
 
+	@EventHandler
 	public void preInit(FMLPreInitializationEvent e) {
-		if (e.getSide() == Side.CLIENT) {
-			ModBlocks.Init();
-			ModItems.Init();
-			ModTileEntities.init();
-			Config.init(e.getSuggestedConfigurationFile());
-		}
+
+		// FMLCommonHandler.instance().bus().register(handler);
+		System.out.println("SPANK: PRE INIT");
+
+		// Config.init(e.getSuggestedConfigurationFile());
+
 	}
 
+	@EventHandler
 	public void init(FMLInitializationEvent e) {
-		if (e.getSide() == Side.CLIENT) {
-			Recipes.addRecipes();
-			Dimensions.init();
-			ModBiomes.init();
-		}
+		System.out.println("SPANK: INIT");
+
+		ModBlocks.Init();
+		ModItems.Init();
+		Recipes.addRecipes();
+		Dimensions.init();
+		ModBiomes.init();
 
 	}
 
+	@EventHandler
 	public void postInit(FMLPostInitializationEvent e) {
+		System.out.println("SPANK: POST INIT");
 
 	}
 
 	public void registerRenderThings() {
-		// ClientRegistry.bindTileEntitySpecialRenderer(WreathTileEntity.class,
-		// new WreathRenderer());
+
 	}
 
 }

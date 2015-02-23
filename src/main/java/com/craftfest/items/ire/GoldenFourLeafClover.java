@@ -5,13 +5,18 @@ import net.minecraft.item.Item;
 import com.craftfest.CraftFestMod;
 
 public class GoldenFourLeafClover extends Item {
-	
-	public GoldenFourLeafClover(){
+
+	private final String name = "goldenfourleafclover";
+
+	public GoldenFourLeafClover() {
 		super();
-		setUnlocalizedName("goldenfourleafclover");
+		setUnlocalizedName(CraftFestMod.MODID + "_" + "goldenfourleafclover");
 		setCreativeTab(CraftFestMod.tabSpring);
 		setMaxStackSize(1);
 	}
-	
+
+	public String getName() {
+		return name;
+	}
 
 }

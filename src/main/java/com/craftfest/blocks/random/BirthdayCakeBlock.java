@@ -10,28 +10,26 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.craftfest.CraftFestMod;
 import com.craftfest.items.ModItems;
 
+public class BirthdayCakeBlock extends BlockCake {
 
+	private final String name = "birthdaycake";
 
-public class BirthdayCakeBlock extends BlockCake{
-	
+	public BirthdayCakeBlock() {
 
-	
-	public BirthdayCakeBlock(){
-		
 		super();
-		setUnlocalizedName("birthdaycake");
+		setUnlocalizedName(CraftFestMod.MODID + "_" + "birthdaycake");
 		setCreativeTab(CraftFestMod.tabSpring);
-		
-		
-	}
-	
 
-	
+	}
+
+	public String getName() {
+		return name;
+	}
+
 	@Override
-    @SideOnly(Side.CLIENT)
-    public Item getItem(World world, BlockPos pos)
-    {
-        return ModItems.BirthdayCakeItem;
-    }
+	@SideOnly(Side.CLIENT)
+	public Item getItem(World world, BlockPos pos) {
+		return ModItems.BirthdayCakeItem;
+	}
 
 }

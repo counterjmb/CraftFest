@@ -11,16 +11,16 @@ public class FourLeafClover extends Item{
 	public FourLeafClover(){
 		
 		super();
-		setUnlocalizedName("FourLeafClover");
+		setUnlocalizedName(CraftFestMod.MODID + "_" + "FourLeafClover");
 		setCreativeTab(CraftFestMod.tabSpring);
 
 	}
 	
-	public String getName(){
+	public String getName() {
 		return name;
 	}
-	
-	//action
+
+	//TODO: FourLeafClover: add action to item?
 	/*
 	@Override
     public boolean itemInteractionForEntity(ItemStack stack, EntityPlayer player, EntityLivingBase target)

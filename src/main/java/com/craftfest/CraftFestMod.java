@@ -4,6 +4,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -65,20 +66,28 @@ public class CraftFestMod {
 		}
 	};
 
+	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		this.proxy.preInit(event);
-
+		System.out.println("SPANK: CRAFTFESTMOD POST INIT");
+		if (event.getSide() == Side.CLIENT) {
+			this.proxy.preInit(event);
+		}
 	}
 
+	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		this.proxy.init(event);
+		System.out.println("SPANK: CRAFTFESTMOD POST INIT");
 
-		proxy.registerRenderThings();
-		// GameRegistry.registerTileEntity(WreathTileEntity.class,
-		// "wreathtileentity");
+		if (event.getSide() == Side.CLIENT) {
+			this.proxy.init(event);
+
+			this.proxy.registerRenderThings();
+		}
 	}
 
+	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
+		System.out.println("SPANK: CRAFTFESTMOD POST INIT");
 		this.proxy.postInit(event);
 	}
 

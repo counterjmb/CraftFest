@@ -5,12 +5,17 @@ import net.minecraft.item.Item;
 import com.craftfest.CraftFestMod;
 
 public class BirthdayCakeItem extends Item {
-	
-	public BirthdayCakeItem(){
+
+	private final String name = "birthdaycake";
+
+	public BirthdayCakeItem() {
 		super();
-		setUnlocalizedName("birthdaycake");
+		setUnlocalizedName(CraftFestMod.MODID + "_" + "birthdaycake");
 		setCreativeTab(CraftFestMod.tabSpring);
 	}
-	
+
+	public String getName() {
+		return name;
+	}
 
 }

@@ -13,42 +13,42 @@ import com.craftfest.items.random.Beer;
 import com.craftfest.items.random.BirthdayCakeItem;
 import com.craftfest.items.random.GlassMug;
 import com.craftfest.items.random.XPPie;
-import com.craftfest.util.RegisterHelper;
 
 public class ModItems {
-	
-	
-	//random
+
+	// random
 	public static Item GlassMug = new GlassMug();
 	public static Item XPPie = new XPPie();
 	public static Item Beer = new Beer(6);
 	public static Item BirthdayCakeItem = new BirthdayCakeItem();
-	
-	//Ire
+
+	// Ire
 	public static Item FourLeafClover = new FourLeafClover();
 	public static Item CornedBeef = new CornedBeef(6, 4.0F, true);
 	public static Item GreenBeer = new GreenBeer(6);
-	
+
+	public static void Init() {
 		
-	
-	public static void Init(){
+		System.out.println("SPANK: ITEMS INIT");
 		
+		
+
 		RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
+
+		// random
+//		renderItem.getItemModelMesher().register(GlassMug,0,new ModelResourceLocation(CraftFestMod.MODID + ":" + ((FourLeafClover) GlassMug).getName(),"inventory"));
+//		renderItem.getItemModelMesher().register(XPPie,0,new ModelResourceLocation(CraftFestMod.MODID + ":" + ((GlassMug) XPPie).getName(),"inventory"));
+//		renderItem.getItemModelMesher().register(Beer,0,new ModelResourceLocation(CraftFestMod.MODID + ":" + ((Beer) Beer).getName(),"inventory"));
+//		renderItem.getItemModelMesher().register(BirthdayCakeItem,0,new ModelResourceLocation(CraftFestMod.MODID + ":" + ((BirthdayCakeItem) BirthdayCakeItem).getName(),"inventory"));
+//		
 		
-		//random
-		RegisterHelper.registerItem(GlassMug);
-		RegisterHelper.registerItem(XPPie);
-		RegisterHelper.registerItem(Beer);
-		RegisterHelper.registerItem(BirthdayCakeItem);
-				
-		//Ire
-		
-		renderItem.getItemModelMesher().register(FourLeafClover, 0, new ModelResourceLocation(CraftFestMod.MODID + ":" + ((FourLeafClover) FourLeafClover).getName(), "inventory" ));
-		/*
-		RegisterHelper.registerItem(FourLeafClover);
-		RegisterHelper.registerItem(CornedBeef);
-		RegisterHelper.registerItem(GreenBeer);
-		*/
+
+		// Ire
+//		renderItem.getItemModelMesher().register(FourLeafClover,0,new ModelResourceLocation(CraftFestMod.MODID + ":" + ((FourLeafClover) FourLeafClover).getName(),"inventory"));
+//		renderItem.getItemModelMesher().register(CornedBeef,0,new ModelResourceLocation(CraftFestMod.MODID + ":" + ((CornedBeef) CornedBeef).getName(),"inventory"));
+//		renderItem.getItemModelMesher().register(GreenBeer,0,new ModelResourceLocation(CraftFestMod.MODID + ":" + ((GreenBeer) GreenBeer).getName(),"inventory"));
+//		
+		 
 	}
 
 }
