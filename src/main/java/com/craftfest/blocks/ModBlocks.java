@@ -21,7 +21,7 @@ public class ModBlocks {
 		RegisterHelper.registerBlock(CloverGrass);
 		
 		//Random
-		RegisterHelper.registerBlock(BirthdayCakeBlock);
+		//RegisterHelper.registerBlock(BirthdayCakeBlock);
 
 	}
 

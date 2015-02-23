@@ -24,7 +24,8 @@ public class CraftFestMod {
 
 	@SidedProxy(clientSide = "com.craftfest.ClientProxy", serverSide = "com.craftfest.ServerProxy")
 	public static CommonProxy proxy;
-	
+
+	// TABS
 	public static CreativeTabs tabWinter = new CreativeTabs(
 			CreativeTabs.getNextID(), "winter") {
 
@@ -38,10 +39,11 @@ public class CraftFestMod {
 
 	public static CreativeTabs tabSpring = new CreativeTabs(
 			CreativeTabs.getNextID(), "spring") {
+
 		@Override
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() {
-			return Item.getItemFromBlock(Blocks.diamond_ore);
+			return Item.getItemFromBlock(Blocks.diamond_block);
 		}
 	};
 
@@ -50,7 +52,7 @@ public class CraftFestMod {
 		@Override
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() {
-			return Item.getItemFromBlock(Blocks.bookshelf);
+			return Item.getItemFromBlock(Blocks.sand);
 		}
 	};
 
@@ -59,10 +61,9 @@ public class CraftFestMod {
 		@Override
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() {
-			return Item.getItemFromBlock(Blocks.end_portal);
+			return Item.getItemFromBlock(Blocks.wooden_slab);
 		}
 	};
-
 
 	public void preInit(FMLPreInitializationEvent event) {
 		this.proxy.preInit(event);

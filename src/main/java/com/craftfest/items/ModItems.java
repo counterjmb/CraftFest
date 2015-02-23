@@ -13,6 +13,7 @@ import com.craftfest.util.RegisterHelper;
 
 public class ModItems {
 	
+	
 	//random
 	public static Item GlassMug = new GlassMug();
 	public static Item XPPie = new XPPie();
@@ -28,6 +29,7 @@ public class ModItems {
 	
 	public static void Init(){
 		
+		
 		//random
 		RegisterHelper.registerItem(GlassMug);
 		RegisterHelper.registerItem(XPPie);
@@ -38,7 +40,7 @@ public class ModItems {
 		RegisterHelper.registerItem(FourLeafClover);
 		RegisterHelper.registerItem(CornedBeef);
 		RegisterHelper.registerItem(GreenBeer);
-			
+		
 	}
 
 }
