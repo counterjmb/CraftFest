@@ -1,5 +1,7 @@
 package com.craftfest;
 
+import com.craftfest.items.ModItems;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -13,9 +15,10 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@Mod(modid = CraftFestMod.MODID, version = CraftFestMod.VERSION)
+@Mod(modid = CraftFestMod.MODID, name = CraftFestMod.NAME, version = CraftFestMod.VERSION)
 public class CraftFestMod {
 
+	//reference
 	public static final String MODID = "craftfest";
 	public static final String VERSION = "0.1";
 	public static final String NAME = "Craft Fest";
@@ -23,7 +26,7 @@ public class CraftFestMod {
 	@Instance(CraftFestMod.MODID)
 	public static CraftFestMod instance;
 
-	@SidedProxy(clientSide = "com.craftfest.ClientProxy", serverSide = "com.craftfest.ServerProxy")
+	@SidedProxy(clientSide = "com.craftfest.ClientProxy", serverSide = "com.craftfest.CommonProxy")
 	public static CommonProxy proxy;
 
 	// TABS
@@ -66,29 +69,27 @@ public class CraftFestMod {
 		}
 	};
 
+	// Listeners
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		System.out.println("SPANK: CRAFTFESTMOD POST INIT");
-		if (event.getSide() == Side.CLIENT) {
-			this.proxy.preInit(event);
-		}
+
+		ModItems.Init();
+		ModItems.register();
+
 	}
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		System.out.println("SPANK: CRAFTFESTMOD POST INIT");
 
-		if (event.getSide() == Side.CLIENT) {
-			this.proxy.init(event);
+		proxy.init(event);
+		proxy.registerRender();
 
-			this.proxy.registerRenderThings();
-		}
 	}
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-		System.out.println("SPANK: CRAFTFESTMOD POST INIT");
-		this.proxy.postInit(event);
+
+		proxy.postInit(event);
 	}
 
 }

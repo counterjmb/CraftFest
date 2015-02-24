@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.craftfest.blocks.ModBlocks;
 import com.craftfest.items.ModItems;
-import com.craftfest.util.Recipes;
+import com.craftfest.recipes.Recipes;
 import com.craftfest.world.Dimensions;
 import com.craftfest.world.biomes.ModBiomes;
 
@@ -17,7 +17,6 @@ public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent e) {
 
 		// FMLCommonHandler.instance().bus().register(handler);
-		System.out.println("SPANK: PRE INIT");
 
 		// Config.init(e.getSuggestedConfigurationFile());
 
@@ -25,7 +24,6 @@ public class CommonProxy {
 
 	@EventHandler
 	public void init(FMLInitializationEvent e) {
-		System.out.println("SPANK: INIT");
 
 		ModBlocks.Init();
 		ModItems.Init();
@@ -37,11 +35,10 @@ public class CommonProxy {
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent e) {
-		System.out.println("SPANK: POST INIT");
 
 	}
 
-	public void registerRenderThings() {
+	public void registerRender() {
 
 	}
 

@@ -10,19 +10,16 @@ import com.craftfest.items.ModItems;
 
 public class GreenBeer extends ItemSoup {
 
-	private final String name = "greenbeer";
+	
 
 	public GreenBeer(int hunger) {
 		super(hunger);
-		setUnlocalizedName(CraftFestMod.MODID + "_" + "greenbeer");
+		setUnlocalizedName("greenbeer");
 		setCreativeTab(CraftFestMod.tabSpring);
 		setMaxStackSize(64);
 
 	}
 
-	public String getName() {
-		return name;
-	}
 
 	@Override
 	public ItemStack onItemUseFinish(ItemStack stack, World world,
