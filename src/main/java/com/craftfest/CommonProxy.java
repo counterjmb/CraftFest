@@ -24,13 +24,13 @@ public class CommonProxy {
 
 	@EventHandler
 	public void init(FMLInitializationEvent e) {
-
+/*
 		ModBlocks.Init();
 		ModItems.Init();
 		Recipes.addRecipes();
 		Dimensions.init();
 		ModBiomes.init();
-
+*/
 	}
 
 	@EventHandler

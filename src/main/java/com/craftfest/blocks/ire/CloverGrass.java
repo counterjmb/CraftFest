@@ -14,31 +14,14 @@ public class CloverGrass extends BlockGrass {
 	// TODO: CloverGrass: cannot place plants on yet.
 	// TODO: CloverGrass: test silk touch
 
-	private final String name = "clovergrass";
 
 	public CloverGrass() {
 
-		this.setUnlocalizedName(CraftFestMod.MODID + "_" + "clovergrass");
+		this.setUnlocalizedName("clovergrass");
 		this.setCreativeTab(CraftFestMod.tabSpring);
 		this.setHardness(0.5F);
 		this.setResistance(0.5F);
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	@Override
-	@SideOnly(Side.CLIENT)
-	public int getBlockColor() {
-		return ColorizerGrass.getGrassColor(0.0D, 1.0D);
-	}
-
-	@Override
-	@SideOnly(Side.CLIENT)
-	public int colorMultiplier(IBlockAccess worldIn, BlockPos pos,
-			int renderPass) {
-		return 1;
-	}
 
 }

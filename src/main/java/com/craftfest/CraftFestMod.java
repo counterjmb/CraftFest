@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
+import com.craftfest.blocks.ModBlocks;
 import com.craftfest.items.ModItems;
 import com.craftfest.tabs.TabFall;
 import com.craftfest.tabs.TabSpring;
@@ -22,26 +23,24 @@ public class CraftFestMod {
 	public static final String VERSION = "0.1";
 	public static final String NAME = "Craft Fest";
 
-	@Instance(CraftFestMod.MODID)
-	public static CraftFestMod instance;
-
-	@SidedProxy(clientSide = "com.craftfest.ClientProxy", serverSide = "com.craftfest.CommonProxy")
-	public static CommonProxy proxy;
-
 	// TABS
 	public static TabWinter tabWinter = new TabWinter("winter");
 	public static TabSpring tabSpring = new TabSpring("spring");
 	public static TabSummer tabSummer = new TabSummer("summer");
 	public static TabFall tabFall = new TabFall("fall");
 
+	@Instance(CraftFestMod.MODID)
+	public static CraftFestMod instance;
+
+	@SidedProxy(clientSide = "com.craftfest.ClientProxy", serverSide = "com.craftfest.CommonProxy")
+	public static CommonProxy proxy;
 
 	// Listeners
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 
-		//ModBlocks.Init();
-		//ModBlocks.register();
-		
+		ModBlocks.Init();
+		ModBlocks.register();
 		ModItems.Init();
 		ModItems.register();
 
@@ -50,9 +49,8 @@ public class CraftFestMod {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 
-		
-		
 		proxy.init(event);
+
 		proxy.registerRender();
 
 	}
