@@ -9,7 +9,7 @@
   "updateUrl": "",
   "authorList": ["counterjmb", "tentakal"],
   "credits": "The Forge and FML guys, for making this example",
-  "logoFile": "",
+  "logoFile": "http://tentakal.com/x/logo-craftfest.png",
   "screenshots": [],
   "dependencies": []
 }
