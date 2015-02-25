@@ -1,10 +1,5 @@
 package com.craftfest;
 
-import com.craftfest.items.ModItems;
-
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -12,13 +7,17 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.craftfest.items.ModItems;
+import com.craftfest.tabs.TabFall;
+import com.craftfest.tabs.TabSpring;
+import com.craftfest.tabs.TabSummer;
+import com.craftfest.tabs.TabWinter;
 
 @Mod(modid = CraftFestMod.MODID, name = CraftFestMod.NAME, version = CraftFestMod.VERSION)
 public class CraftFestMod {
 
-	//reference
+	// reference
 	public static final String MODID = "craftfest";
 	public static final String VERSION = "0.1";
 	public static final String NAME = "Craft Fest";
@@ -30,49 +29,19 @@ public class CraftFestMod {
 	public static CommonProxy proxy;
 
 	// TABS
-	public static CreativeTabs tabWinter = new CreativeTabs(
-			CreativeTabs.getNextID(), "winter") {
+	public static TabWinter tabWinter = new TabWinter("winter");
+	public static TabSpring tabSpring = new TabSpring("spring");
+	public static TabSummer tabSummer = new TabSummer("summer");
+	public static TabFall tabFall = new TabFall("fall");
 
-		@Override
-		@SideOnly(Side.CLIENT)
-		public Item getTabIconItem() {
-			return Item.getItemFromBlock(Blocks.snow);
-		}
-
-	};
-
-	public static CreativeTabs tabSpring = new CreativeTabs(
-			CreativeTabs.getNextID(), "spring") {
-
-		@Override
-		@SideOnly(Side.CLIENT)
-		public Item getTabIconItem() {
-			return Item.getItemFromBlock(Blocks.diamond_block);
-		}
-	};
-
-	public static CreativeTabs tabSummer = new CreativeTabs(
-			CreativeTabs.getNextID(), "summer") {
-		@Override
-		@SideOnly(Side.CLIENT)
-		public Item getTabIconItem() {
-			return Item.getItemFromBlock(Blocks.sand);
-		}
-	};
-
-	public static CreativeTabs tabFall = new CreativeTabs(
-			CreativeTabs.getNextID(), "fall") {
-		@Override
-		@SideOnly(Side.CLIENT)
-		public Item getTabIconItem() {
-			return Item.getItemFromBlock(Blocks.wooden_slab);
-		}
-	};
 
 	// Listeners
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 
+		//ModBlocks.Init();
+		//ModBlocks.register();
+		
 		ModItems.Init();
 		ModItems.register();
 
@@ -81,6 +50,8 @@ public class CraftFestMod {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 
+		
+		
 		proxy.init(event);
 		proxy.registerRender();
 
