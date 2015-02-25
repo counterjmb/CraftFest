@@ -1,10 +1,17 @@
 #Craft Fest US English
 
 #Blocks
-tile.Clover Grass.name=Clover Grass
-tile.FourLeafClover.name=Four Leaf Clover
+
+#Ire
+tile.clovergrass.name=Clover Grass
 
 #Items
+
+#Ire
+item.cornedbeef.name=Corned Beef
+item.fourleafclover.name=Four Leaf Clover
+item.goldenfourleafclover.name=Golden Four Leaf Clover
+item.greenbeer.name=Green Beer
 
 #Armor
 

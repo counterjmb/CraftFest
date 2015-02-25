@@ -7,23 +7,28 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.craftfest.CraftFestMod;
+import com.craftfest.blocks.ire.CelticStone;
 import com.craftfest.blocks.ire.CloverGrass;
 
 public class ModBlocks {
 	
 	public static Block CloverGrass;
+	public static Block CelticStone;
 	
 	public static void Init(){
 	
 		CloverGrass = new CloverGrass();
+		CelticStone = new CelticStone();
 	}
 	
 	public static void register(){
 		GameRegistry.registerBlock(CloverGrass, CloverGrass.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(CelticStone, CelticStone.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRender(){
 		registerRender(CloverGrass);
+		registerRender(CelticStone);
 	}
 	
 	public static void registerRender(Block block){

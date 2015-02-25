@@ -10,8 +10,6 @@ import com.craftfest.items.ModItems;
 
 public class GreenBeer extends ItemSoup {
 
-	
-
 	public GreenBeer(int hunger) {
 		super(hunger);
 		setUnlocalizedName("greenbeer");
@@ -19,7 +17,6 @@ public class GreenBeer extends ItemSoup {
 		setMaxStackSize(64);
 
 	}
-
 
 	@Override
 	public ItemStack onItemUseFinish(ItemStack stack, World world,
