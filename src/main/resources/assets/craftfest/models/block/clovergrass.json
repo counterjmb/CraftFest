@@ -3,8 +3,8 @@
     "textures": {
         "particle": "blocks/dirt",
         "bottom": "blocks/dirt",
-        "top": "blocks/clovergrass_top",
-        "side": "blocks/clovergrass_side",
-        "overlay": "blocks/clovergrass_side_side_overlay"
+        "top": "craftfest:blocks/clovergrass_top",
+        "side": "craftfest:blocks/clovergrass_side",
+        "overlay": "craftfest:blocks/clovergrass_side_overlay"
     }
 }
