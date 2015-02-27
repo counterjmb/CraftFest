@@ -1,16 +1,11 @@
 package com.craftfest.items.ire;
 
-import com.craftfest.CraftFestMod;
-import com.craftfest.items.random.Beer;
-import com.craftfest.items.random.BirthdayCakeItem;
-import com.craftfest.items.random.GlassMug;
-import com.craftfest.items.random.XPPie;
-
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+
+import com.craftfest.CraftFestMod;
 
 public class IreItems {
 

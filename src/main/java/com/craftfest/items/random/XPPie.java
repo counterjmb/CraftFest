@@ -10,21 +10,18 @@ import com.craftfest.CraftFestMod;
 public class XPPie extends ItemFood {
 
 	private boolean alwaysEdible;
-	private final String name = "xppie";
+
 
 	public XPPie() {
 
 		super(2, 2.0F, false);
-		setUnlocalizedName(CraftFestMod.MODID + "_" + "xppie");
+		setUnlocalizedName("xppie");
 		setCreativeTab(CraftFestMod.tabSpring);
-
 		this.alwaysEdible = true;
 
 	}
 
-	public String getName() {
-		return name;
-	}
+
 
 	public ItemStack onEaten(ItemStack stack, World world, EntityPlayer player) {
 		player.addExperienceLevel(3);
