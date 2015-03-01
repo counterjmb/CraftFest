@@ -9,7 +9,7 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
 import com.craftfest.CraftFestMod;
-import com.craftfest.items.ModItems;
+import com.craftfest.init.RandomItems;
 
 public class GreenBeer extends ItemSoup {
 
@@ -32,7 +32,7 @@ public class GreenBeer extends ItemSoup {
         	
         }
         
-		return new ItemStack(ModItems.GlassMug);
+		return new ItemStack(RandomItems.GlassMug);
 	}
 
 	@Override

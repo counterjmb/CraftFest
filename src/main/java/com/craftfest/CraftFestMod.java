@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.craftfest.blocks.ModBlocks;
-import com.craftfest.items.ModItems;
+import com.craftfest.init.ModItems;
 import com.craftfest.tabs.TabFall;
 import com.craftfest.tabs.TabSpring;
 import com.craftfest.tabs.TabSummer;

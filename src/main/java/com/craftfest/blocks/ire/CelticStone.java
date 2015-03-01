@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 
 import com.craftfest.CraftFestMod;
 
@@ -20,6 +21,11 @@ public class CelticStone extends Block {
 		setResistance(10.0F);
 
 	}
+	
+    public static Block getBlockFromItem(Item item)
+    {
+        return item instanceof ItemBlock ? ((ItemBlock)item).getBlock() : null;
+    }
 
 
 }

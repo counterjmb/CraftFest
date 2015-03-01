@@ -1,4 +1,4 @@
-package com.craftfest.items;
+package com.craftfest.init;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.RenderItem;
@@ -6,10 +6,8 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 
 import com.craftfest.CraftFestMod;
-import com.craftfest.items.ire.IreItems;
 import com.craftfest.items.random.Beer;
 import com.craftfest.items.random.GlassMug;
-import com.craftfest.items.random.RandomItems;
 import com.craftfest.items.random.XPPie;
 
 public class ModItems {

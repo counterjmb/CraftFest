@@ -5,7 +5,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.craftfest.blocks.ModBlocks;
-import com.craftfest.items.ire.IreItems;
+import com.craftfest.init.IreItems;
 
 public class Ire {
 

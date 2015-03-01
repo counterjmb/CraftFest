@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.craftfest.blocks.ModBlocks;
-import com.craftfest.items.ModItems;
+import com.craftfest.init.ModItems;
 import com.craftfest.recipes.Recipes;
 import com.craftfest.world.Dimensions;
 import com.craftfest.world.biomes.ModBiomes;
@@ -24,13 +24,8 @@ public class CommonProxy {
 
 	@EventHandler
 	public void init(FMLInitializationEvent e) {
-/*
-		ModBlocks.Init();
-		ModItems.Init();
-		Recipes.addRecipes();
-		Dimensions.init();
-		ModBiomes.init();
-*/
+
+
 	}
 
 	@EventHandler

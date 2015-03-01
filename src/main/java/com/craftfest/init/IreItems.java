@@ -1,4 +1,4 @@
-package com.craftfest.items.ire;
+package com.craftfest.init;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -6,6 +6,10 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.craftfest.CraftFestMod;
+import com.craftfest.items.ire.CornedBeef;
+import com.craftfest.items.ire.FourLeafClover;
+import com.craftfest.items.ire.GoldenFourLeafClover;
+import com.craftfest.items.ire.GreenBeer;
 
 public class IreItems {
 

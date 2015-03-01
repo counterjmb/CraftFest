@@ -1,4 +1,4 @@
-package com.craftfest.items.random;
+package com.craftfest.init;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -6,6 +6,10 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.craftfest.CraftFestMod;
+import com.craftfest.items.random.Bacon;
+import com.craftfest.items.random.Beer;
+import com.craftfest.items.random.GlassMug;
+import com.craftfest.items.random.XPPie;
 
 public class RandomItems {
 	

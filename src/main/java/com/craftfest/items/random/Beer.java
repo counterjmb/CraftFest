@@ -6,6 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.craftfest.CraftFestMod;
+import com.craftfest.init.RandomItems;
 
 public class Beer extends ItemSoup {
 	
