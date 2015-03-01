@@ -1,19 +1,27 @@
 package com.craftfest.world;
-//https://www.youtube.com/watch?v=qwb2ykhnCsY&list=UU786-fvOTMkndZPRwr15zVA&index=195
 
 import net.minecraftforge.common.DimensionManager;
 
-import com.craftfest.CraftFestMod;
+//https://www.youtube.com/watch?v=qwb2ykhnCsY&list=UU786-fvOTMkndZPRwr15zVA&index=195
+
 
 public class Dimensions {
 	
 	//dimension bits
 	//TODO: add config element
-	public static int christmasDimID = 9;
+	public static int IreDimentionID = 9;
 	
 	public static void init(){
-		//Dimensions
+		registerDimension(); 
 
+	}
+	
+	public static void registerDimension(){
+		
+		//ire
+		DimensionManager.registerProviderType(IreDimentionID, WolrdProviderIre.class, false);
+		DimensionManager.registerDimension(IreDimentionID, IreDimentionID);
+		
 	}
 
 }

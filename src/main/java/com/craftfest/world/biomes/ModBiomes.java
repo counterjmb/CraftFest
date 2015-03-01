@@ -5,24 +5,47 @@ import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.common.BiomeManager;
 
+import com.craftfest.world.biomes.ire.Cliffs;
+import com.craftfest.world.biomes.ire.CloverFields;
+import com.craftfest.world.biomes.ire.Moor;
+
 public class ModBiomes {
 	
-	//ids
-	public static int snowforestID = 120;
+	//IDs
+	//Ire
+	public static int cloverfieldsID = 120;
+	public static int MoorID = 121;
+	public static int CliffsID = 122;
 	
-	public static BiomeGenBase snowyforest;
 	
-	
-	
-	
+	//Instantiations 
+	//Ire
+	public static BiomeGenBase CloverFields;
+	public static BiomeGenBase Moor;
+	public static BiomeGenBase Cliffs;
 	
 	public static void init(){
-		/*
-		snowyforest = new SnowyForest(snowforestID);
 		
-		BiomeDictionary.registerBiomeType(snowyforest, Type.FOREST);
-		BiomeManager.addSpawnBiome(snowyforest);
-	*/
+		//Constructors
+		//Ire
+		CloverFields = new CloverFields(cloverfieldsID);
+		Moor = new Moor(MoorID);
+		Cliffs = new Cliffs(CliffsID);
+		
+		
+		//Registers
+		//Ire
+		BiomeDictionary.registerBiomeType(CloverFields, Type.MAGICAL);
+		BiomeManager.addSpawnBiome(CloverFields);
+		BiomeDictionary.registerBiomeType(Moor, Type.WET);
+		BiomeManager.addSpawnBiome(Moor);
+		BiomeDictionary.registerBiomeType(Cliffs, Type.HILLS);
+		BiomeManager.addSpawnBiome(Cliffs);
+	
+		
+	}
+	
+	public static void register(){
 		
 	}
 

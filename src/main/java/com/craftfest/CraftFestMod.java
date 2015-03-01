@@ -14,6 +14,8 @@ import com.craftfest.tabs.TabFall;
 import com.craftfest.tabs.TabSpring;
 import com.craftfest.tabs.TabSummer;
 import com.craftfest.tabs.TabWinter;
+import com.craftfest.world.Dimensions;
+import com.craftfest.world.biomes.ModBiomes;
 
 @Mod(modid = CraftFestMod.MODID, name = CraftFestMod.NAME, version = CraftFestMod.VERSION)
 public class CraftFestMod {
@@ -43,6 +45,7 @@ public class CraftFestMod {
 		ModBlocks.register();
 		ModItems.Init();
 		ModItems.register();
+		
 
 	}
 
@@ -50,8 +53,9 @@ public class CraftFestMod {
 	public void init(FMLInitializationEvent event) {
 
 		proxy.init(event);
-
 		proxy.registerRender();
+		ModBiomes.init();
+		Dimensions.init();
 
 	}
 
