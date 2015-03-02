@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "axis=z": { "model": "craftfest:ireportal_ew" },
+        "axis=x": { "model": "craftfest:ireportal_ns" }
+    }
+}
