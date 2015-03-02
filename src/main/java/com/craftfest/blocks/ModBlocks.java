@@ -7,33 +7,39 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.craftfest.CraftFestMod;
+import com.craftfest.blocks.ire.Cabbage;
 import com.craftfest.blocks.ire.CelticStone;
 import com.craftfest.blocks.ire.CloverGrass;
 import com.craftfest.blocks.ire.IrePortal;
 
 public class ModBlocks {
 	
-	public static Block CloverGrass;
+	public static Block Cabbage;
 	public static Block CelticStone;
+	public static Block CloverGrass;
 	public static Block IrePortal;
 	
 	public static void Init(){ 
 	
-		CloverGrass = new CloverGrass();
+		Cabbage = new Cabbage();
 		CelticStone = new CelticStone();
+		CloverGrass = new CloverGrass();
 		IrePortal = new IrePortal(); 
 		
 	}
 	
 	public static void register(){
-		GameRegistry.registerBlock(CloverGrass, CloverGrass.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(Cabbage, Cabbage.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(CelticStone, CelticStone.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(CloverGrass, CloverGrass.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(IrePortal, IrePortal.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRender(){
-		registerRender(CloverGrass);
+		
+		registerRender(Cabbage);
 		registerRender(CelticStone);
+		registerRender(CloverGrass);
 		registerRender(IrePortal);
 	}
 	

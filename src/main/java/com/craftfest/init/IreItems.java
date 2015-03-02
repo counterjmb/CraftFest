@@ -2,10 +2,13 @@ package com.craftfest.init;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.craftfest.CraftFestMod;
+import com.craftfest.blocks.ModBlocks;
+import com.craftfest.items.ire.Cabbage;
 import com.craftfest.items.ire.CornedBeef;
 import com.craftfest.items.ire.FourLeafClover;
 import com.craftfest.items.ire.GoldenFourLeafClover;
@@ -13,13 +16,17 @@ import com.craftfest.items.ire.GreenBeer;
 
 public class IreItems {
 
+	public static Item Cabbage;
 	public static Item CornedBeef;
 	public static Item FourLeafClover;
 	public static Item GoldenFourLeafClover;
 	public static Item GreenBeer;
+	
 
 	public static void init() {
-
+		
+			
+		Cabbage = new Cabbage(3, 0.6F, ModBlocks.Cabbage, Blocks.farmland);
 		CornedBeef = new CornedBeef(6, 4.0F, true);
 		FourLeafClover = new FourLeafClover();
 		GoldenFourLeafClover = new GoldenFourLeafClover();
@@ -28,6 +35,7 @@ public class IreItems {
 
 	public static void register() {
 
+		GameRegistry.registerItem(Cabbage,Cabbage.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(CornedBeef,CornedBeef.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(FourLeafClover, FourLeafClover.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(GoldenFourLeafClover, GoldenFourLeafClover.getUnlocalizedName().substring(5));
@@ -37,6 +45,7 @@ public class IreItems {
 
 	public static void regesterRender() {
 		
+		registerRender(Cabbage);
 		registerRender(CornedBeef);
 		registerRender(FourLeafClover);
 		registerRender(GoldenFourLeafClover);

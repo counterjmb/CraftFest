@@ -25,11 +25,9 @@ public class IrePortal extends BlockPortal {
 		setDefaultState(this.blockState.getBaseState().withProperty(AXIS,EnumFacing.Axis.X));
 		setTickRandomly(true);
 		setUnlocalizedName("ireportal");
+		
 	}
 
-	public boolean renderAsNormalBlock() {
-		return false;
-	}
 
 	public void onEntityCollidedWithBlock(World world, BlockPos pos, IBlockState state, Entity entity) {
 		if ((entity.ridingEntity == null) && (entity.riddenByEntity == null) && ((entity instanceof EntityPlayerMP))) {
@@ -48,6 +46,56 @@ public class IrePortal extends BlockPortal {
 			}
 		}
 	}
+	
+    public boolean func_176548_d(World world, BlockPos pos)
+    {
+        IrePortal.Size size = new IrePortal.Size(world, pos, EnumFacing.Axis.X);
+
+        if (size.func_150860_b() && size.field_150864_e == 0)
+        {
+            size.func_150859_c();
+            return true;
+        }
+        else
+        {
+        	IrePortal.Size size1 = new IrePortal.Size(world, pos, EnumFacing.Axis.Z);
+
+            if (size1.func_150860_b() && size1.field_150864_e == 0)
+            {
+                size1.func_150859_c();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+    
+    public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock)
+    {
+        EnumFacing.Axis axis = (EnumFacing.Axis)state.getValue(AXIS);
+        IrePortal.Size size;
+
+        if (axis == EnumFacing.Axis.X)
+        {
+            size = new IrePortal.Size(worldIn, pos, EnumFacing.Axis.X);
+
+            if (!size.func_150860_b() || size.field_150864_e < size.field_150868_h * size.field_150862_g)
+            {
+                worldIn.setBlockState(pos, Blocks.air.getDefaultState());
+            }
+        }
+        else if (axis == EnumFacing.Axis.Z)
+        {
+            size = new IrePortal.Size(worldIn, pos, EnumFacing.Axis.Z);
+
+            if (!size.func_150860_b() || size.field_150864_e < size.field_150868_h * size.field_150862_g)
+            {
+                worldIn.setBlockState(pos, Blocks.air.getDefaultState());
+            }
+        }
+    }
 
 	public static class Size {
 		private final World world;
@@ -172,8 +220,7 @@ public class IrePortal extends BlockPortal {
 		}
 
 		protected boolean func_150857_a(Block block) {
-			return block.getMaterial() == Material.air || block == Blocks.fire
-					|| block == ModBlocks.IrePortal;
+			return block.getMaterial() == Material.air || block == Blocks.fire || block == ModBlocks.IrePortal;
 		}
 
 		public boolean func_150860_b() {

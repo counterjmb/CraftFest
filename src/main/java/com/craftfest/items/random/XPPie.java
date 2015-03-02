@@ -23,7 +23,7 @@ public class XPPie extends ItemFood {
 
 
 
-	public ItemStack onEaten(ItemStack stack, World world, EntityPlayer player) {
+	public ItemStack onItemUseFinish(ItemStack stack, World world, EntityPlayer player) {
 		player.addExperienceLevel(3);
 		--stack.stackSize;
 		player.getFoodStats().addStats(this, stack);
